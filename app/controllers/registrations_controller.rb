@@ -18,7 +18,8 @@ def create
   
   sign_out_session!
 
-  if verify_recaptcha
+ # if verify_recaptcha
+  params.permit!
 
     Tenant.transaction  do 
       @tenant = Tenant.create_new_tenant(params)
@@ -44,11 +45,11 @@ def create
 
     end  #  wrap tenant/user creation in a transaction
         
-  else
-    flash[:error] = "Recaptcha codes didn't match; please try again"
-    prep_signup_view( params[:tenant], params[:user], params[:coupon] )
-    render :new
-  end
+ # else
+ #   flash[:error] = "Recaptcha codes didn't match; please try again"
+ #   prep_signup_view( params[:tenant], params[:user], params[:coupon] )
+ #   render :new
+#  end
 
 end   # def create
 
