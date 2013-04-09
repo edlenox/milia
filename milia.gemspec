@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["David Anderson"]
-  s.date = "2013-01-19"
+  s.date = "2013-04-09"
   s.description = "Transparent Multi-tenanting for hosted Rails 3.1+/Ruby 1.9.2 applications"
   s.email = "dsaronin@gmail.com"
   s.extra_rdoc_files = [
@@ -19,7 +19,6 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
     ".project",
-    ".rvmrc",
     ".slugignore",
     "Gemfile",
     "Gemfile.lock",
@@ -127,7 +126,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/dsaronin/milia"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.24"
+  s.rubygems_version = "1.8.25"
   s.summary = "Multi-tenanting for hosted Rails 3.1+ applications"
 
   if s.respond_to? :specification_version then
@@ -135,16 +134,16 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<rails>, [">= 3.2.9"])
-      s.add_runtime_dependency(%q<devise>, ["= 2.1.2"])
-      s.add_development_dependency(%q<pg>, [">= 0"])
+      s.add_runtime_dependency(%q<devise>, [">= 2.2.3"])
+      s.add_runtime_dependency(%q<mysql2>, [">= 0"])
       s.add_development_dependency(%q<shoulda>, [">= 0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.6.4"])
       s.add_development_dependency(%q<rdoc>, [">= 0"])
       s.add_development_dependency(%q<turn>, [">= 0"])
     else
       s.add_dependency(%q<rails>, [">= 3.2.9"])
-      s.add_dependency(%q<devise>, ["= 2.1.2"])
-      s.add_dependency(%q<pg>, [">= 0"])
+      s.add_dependency(%q<devise>, [">= 2.2.3"])
+      s.add_dependency(%q<mysql2>, [">= 0"])
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
       s.add_dependency(%q<rdoc>, [">= 0"])
@@ -152,8 +151,8 @@ Gem::Specification.new do |s|
     end
   else
     s.add_dependency(%q<rails>, [">= 3.2.9"])
-    s.add_dependency(%q<devise>, ["= 2.1.2"])
-    s.add_dependency(%q<pg>, [">= 0"])
+    s.add_dependency(%q<devise>, [">= 2.2.3"])
+    s.add_dependency(%q<mysql2>, [">= 0"])
     s.add_dependency(%q<shoulda>, [">= 0"])
     s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
     s.add_dependency(%q<rdoc>, [">= 0"])
